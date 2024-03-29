@@ -5,7 +5,7 @@
 .nav {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     padding: 20px;
     background-color: variables.$primary-bg-color;
@@ -16,10 +16,15 @@
     }
 }
 
-.nav__menu {
+.nav-menu {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &__list {
+        display: flex;
+        list-style: none;
+    }
 
     &__item {
         padding: 10px 20px;
