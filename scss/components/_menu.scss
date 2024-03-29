@@ -1,0 +1,37 @@
+@use "../abstract/variables";
+@use "../abstract/functions";
+@use "../abstract/mixins";
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    background-color: variables.$primary-bg-color;
+
+    &__brand {
+        font-size: 36px;
+        color: functions.set-text-color(variables.$primary-bg-color);
+    }
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__item {
+        padding: 10px 20px;
+    }
+
+    &__link {
+        color: functions.set-text-color(variables.$primary-bg-color);
+    }
+}
+
+@include mixins.media-sm {
+    .nav-menu {
+        display: flex;
+    }
+}
